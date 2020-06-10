@@ -7,7 +7,7 @@ metadata:
     app: voting-app
     tier: frontend
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       name: vote
