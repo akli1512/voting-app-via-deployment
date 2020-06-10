@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: worker-deployment
+  labels:
+    name: worker-deployment
+    app: voting-app
+    tier: backend
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: worker
+      app: voting-app
+      tier: backend
+  template:
+      metadata:
+        name: worker
+        labels:
+          name: worker
+          app: voting-app
+          tier: backend
+
+      spec:
+        containers:
+          -  name: worker-container
+             image: akli1512/example-voting-app_worker:v1

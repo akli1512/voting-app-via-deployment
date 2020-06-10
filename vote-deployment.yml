@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vote-deployment
+  labels:
+    name: vote-deployment
+    app: voting-app
+    tier: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: vote
+      app: voting-app
+      tier: frontend
+
+  template:
+      metadata:
+        name: vote
+        labels:
+          name: vote
+          app: voting-app
+          tier: frontend
+      spec:
+        containers:
+          - name: vote-container
+            image: akli1512/example-voting-app_vote:v1
+            ports:
+              - containerPort: 80
