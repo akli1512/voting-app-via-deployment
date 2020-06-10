@@ -6,7 +6,6 @@ metadata:
     name: result-deployment
     app: voting-app
     tier: frontend
-
 spec:
   replicas: 1
   selector:
@@ -21,7 +20,6 @@ spec:
           name: result
           app: voting-app
           tier: frontend
-
       spec:
         containers:
           -  name: result-container

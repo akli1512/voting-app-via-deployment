@@ -15,3 +15,4 @@ spec:
     name: db
     app: voting-app
     tier: backend
+

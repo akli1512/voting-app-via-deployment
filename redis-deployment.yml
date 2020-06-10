@@ -13,7 +13,6 @@ spec:
       name: redis
       app: voting-app
       tier: backend
-
   template:
       metadata:
         name: redis

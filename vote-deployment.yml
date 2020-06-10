@@ -13,7 +13,6 @@ spec:
       name: vote
       app: voting-app
       tier: frontend
-
   template:
       metadata:
         name: vote

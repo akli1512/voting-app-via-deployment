@@ -21,3 +21,4 @@ spec:
     name: result
     app: voting-app
     tier: frontend
+
